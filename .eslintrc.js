@@ -21,4 +21,28 @@ module.exports = {
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
   },
+  overrides: [
+    {
+      // enable the rule specifically for TypeScript files
+      "files": ["*.ts", "*.tsx"],
+      "rules": {
+        "@typescript-eslint/explicit-function-return-type": ["error"],
+        '@typescript-eslint/no-explicit-any': 'error',
+        "@typescript-eslint/no-unused-vars": "error",
+        "@typescript-eslint/no-useless-constructor": "error",
+        "@typescript-eslint/consistent-type-assertions": "error",
+        "@typescript-eslint/no-explicit-any": "error",
+        "@typescript-eslint/no-implicit-any-catch": "error",
+        "@typescript-eslint/no-unsafe-argument": "error",
+        "@typescript-eslint/no-unsafe-assignment": "error",
+        "@typescript-eslint/no-unsafe-call": "error",
+        "@typescript-eslint/no-unsafe-member-access": "error",
+        "@typescript-eslint/no-unsafe-return" : "error",
+        "@typescript-eslint/no-unnecessary-boolean-literal-compare": "error",
+        "@typescript-eslint/no-unnecessary-condition": "error",
+        "@typescript-eslint/prefer-nullish-coalescing" : "error",
+        "@typescript-eslint/prefer-optional-chain": "error"
+      }
+    }
+  ]
 };

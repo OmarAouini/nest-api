@@ -1,18 +1,16 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { UserModule } from './modules/user/user.module';
-import { BookModule } from './modules/book/book.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { Connection, EntityManager } from 'typeorm';
-import { User } from './modules/user/entities/user.entity';
+import { AppController } from './app.controller';
+import { OrmTransactionsSubscriber } from './orm_transactions.subscribe';
+import { User } from './user/entities/user.entity';
+import { UserModule } from './user/user.module';
 
 @Module({
   imports: [
     UserModule,
-    BookModule,
     TypeOrmModule.forRoot({
       type: 'mysql',
-      host: '127.0.0.1',
+      host: 'localhost',
       port: 3306,
       username: 'root',
       password: 'root',
@@ -20,13 +18,13 @@ import { User } from './modules/user/entities/user.entity';
       entities: [User],
       synchronize: true,
       autoLoadEntities: true,
+      subscribers: [OrmTransactionsSubscriber],
+      extra: {
+        connectionLimit: 20,
+      },
     }),
   ],
   controllers: [AppController],
+  providers: [OrmTransactionsSubscriber],
 })
-export class AppModule {
-  constructor(
-    public connection: Connection,
-    public entityManager: EntityManager,
-  ) {}
-}
+export class AppModule {}

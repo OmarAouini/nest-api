@@ -7,9 +7,9 @@
 
   <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
     <p align="center">
-<a href="https://www.yarnjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/yarn/v/@nestjs/core.svg" alt="yarn Version" /></a>
-<a href="https://www.yarnjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/yarn/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.yarnjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/yarn/dm/@nestjs/common.svg" alt="yarn Downloads" /></a>
+<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
+<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
+<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
 <a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
 <a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
 <a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
@@ -29,33 +29,33 @@
 ## Installation
 
 ```bash
-$ yarn
+$ npm install
 ```
 
 ## Running the app
 
 ```bash
 # development
-$ yarn run start
+$ npm run start
 
 # watch mode
-$ yarn run start:dev
+$ npm run start:dev
 
 # production mode
-$ yarn run start:prod
+$ npm run start:prod
 ```
 
 ## Test
 
 ```bash
 # unit tests
-$ yarn run test
+$ npm run test
 
 # e2e tests
-$ yarn run test:e2e
+$ npm run test:e2e
 
 # test coverage
-$ yarn run test:cov
+$ npm run test:cov
 ```
 
 ## Support
